@@ -4,12 +4,6 @@
 # Log file
 *.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
 # Package Files #
 *.jar
 *.war
@@ -19,9 +13,41 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machine crash logs
 hs_err_pid*
 replay_pid*
 
-# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
+# Kotlin
 .kotlin/
+*.kotlin_module
+
+# Android
+local.properties
+*.apk
+*.aab
+*.ap_
+.idea/
+*.iml
+build/
+
+# iOS
+*.xcworkspace
+*.xcuserdata
+Pods/
+DerivedData/
+
+# Gradle
+.gradle/
+build/
+
+# AI Coding Agent Files
+.claude/
+.agents/skills/
+skills-lock.json
+.codegraph/
+CLAUDE.md
+
+# Environment
+.env
+.env.local
+*.keystore
