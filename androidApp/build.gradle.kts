@@ -13,6 +13,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(project(":shared"))
+                implementation("androidx.activity:activity:1.8.0")
             }
         }
     }

@@ -181,8 +181,7 @@ include(":androidApp")
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("org.jetbrains.compose")          // Compose Multiplatform
-    id("com.tencent.kuikly")             // Kuikly KSP 插件
+    id("org.jetbrains.compose")
 }
 
 kotlin {
@@ -194,12 +193,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                // Kuikly Core
-                implementation("com.tencent.kuikly:core:VERSION")
-                implementation("com.tencent.kuikly:compose:VERSION")
-                implementation("com.tencent.kuikly:core-annotations:VERSION")
-
-                // KMP 标准库
+                implementation("com.tencent.kuikly:core:2.0.21")
+                implementation("com.tencent.kuikly:compose:2.0.21")
+                implementation("com.tencent.kuikly:core-annotations:2.0.21")
                 implementation(compose.runtime)
             }
         }
@@ -209,6 +205,10 @@ kotlin {
 android {
     namespace = "com.tencent.kuikly.essayocr"
     compileSdk = 34
+}
+
+dependencies {
+    add("ksp", "com.tencent.kuikly:core-ksp:2.0.21")
 }
 
 ksp {
@@ -303,7 +303,8 @@ include(":feature:settings")
 ```toml
 [versions]
 kotlin = "2.0.21"
-agp = "8.2.0"
+agp = "8.5.0"
+ksp = "2.0.21-1.0.27"
 kuikly = "2.0.21"
 compose-multiplatform = "1.6.0"
 
@@ -311,6 +312,7 @@ compose-multiplatform = "1.6.0"
 kuikly-core = { module = "com.tencent.kuikly:core", version.ref = "kuikly" }
 kuikly-compose = { module = "com.tencent.kuikly:compose", version.ref = "kuikly" }
 kuikly-core-annotations = { module = "com.tencent.kuikly:core-annotations", version.ref = "kuikly" }
+kuikly-core-ksp = { module = "com.tencent.kuikly:core-ksp", version.ref = "kuikly" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
