@@ -22,10 +22,11 @@
 | 维度 | 要求 |
 |------|------|
 | UI 框架 | Kuikly Compose DSL |
-| 多平台 | Android + iOS |
-| 最低支持 | Android 5.0+ (API 21), iOS 12.0+ |
-| 构建工具 | Gradle 8.7 + AGP 8.5 + KSP |
-| 语言 | Kotlin 2.0.21 |
+| 多平台 | Android + iOS + H5 + 微信小程序 |
+| 最低支持 | Android 7.0+ (API 24), iOS 14.1+ |
+| 构建工具 | Gradle 8.13 + AGP 8.13.2 + KSP |
+| 语言 | Kotlin 2.1.21 |
+| UI 引擎 | Kuikly 2.21.0-2.1.21 + Compose Multiplatform 1.9.3 |
 
 ## OCR 方案
 

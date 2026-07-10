@@ -1,19 +1,24 @@
 [versions]
-kotlin = "2.0.21"
-agp = "8.5.0"
-ksp = "2.0.21-1.0.27"
-kuikly = "2.0.21"
-compose-multiplatform = "1.6.0"
+kotlin = "2.1.21"
+agp = "8.13.2"
+ksp = "2.1.21-2.0.1"
+kuikly = "2.21.0-2.1.21"
+compose-multiplatform = "1.9.3"
 
 [libraries]
-kuikly-core = { module = "com.tencent.kuikly:core", version.ref = "kuikly" }
-kuikly-compose = { module = "com.tencent.kuikly:compose", version.ref = "kuikly" }
-kuikly-core-annotations = { module = "com.tencent.kuikly:core-annotations", version.ref = "kuikly" }
-kuikly-core-ksp = { module = "com.tencent.kuikly:core-ksp", version.ref = "kuikly" }
+kuikly-core = { module = "com.tencent.kuikly-open:core", version.ref = "kuikly" }
+kuikly-compose = { module = "com.tencent.kuikly-open:compose", version.ref = "kuikly" }
+kuikly-core-annotations = { module = "com.tencent.kuikly-open:core-annotations", version.ref = "kuikly" }
+kuikly-core-ksp = { module = "com.tencent.kuikly-open:core-ksp", version.ref = "kuikly" }
+kuikly-core-gradle-plugin = { module = "com.tencent.kuikly-open:core-gradle-plugin", version.ref = "kuikly" }
+kuikly-core-render-android = { module = "com.tencent.kuikly-open:core-render-android", version.ref = "kuikly" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kuikly-gradle-plugin = { id = "com.tencent.kuikly-open.kuikly", version.ref = "kuikly" }

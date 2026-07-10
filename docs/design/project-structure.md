@@ -204,7 +204,7 @@ kotlin {
 
 android {
     namespace = "com.tencent.kuikly.essayocr"
-    compileSdk = 34
+    compileSdk = 36
 }
 
 dependencies {
@@ -212,8 +212,7 @@ dependencies {
 }
 
 ksp {
-    arg("moduleId", "essayocr")
-    arg("isMainModule", "true")
+    arg("pageName", "")
 }
 ```
 
@@ -302,17 +301,17 @@ include(":feature:settings")
 
 ```toml
 [versions]
-kotlin = "2.0.21"
-agp = "8.5.0"
-ksp = "2.0.21-1.0.27"
-kuikly = "2.0.21"
-compose-multiplatform = "1.6.0"
+kotlin = "2.1.21"
+agp = "8.13.2"
+ksp = "2.1.21-2.0.1"
+kuikly = "2.21.0-2.1.21"
+compose-multiplatform = "1.9.3"
 
 [libraries]
-kuikly-core = { module = "com.tencent.kuikly:core", version.ref = "kuikly" }
-kuikly-compose = { module = "com.tencent.kuikly:compose", version.ref = "kuikly" }
-kuikly-core-annotations = { module = "com.tencent.kuikly:core-annotations", version.ref = "kuikly" }
-kuikly-core-ksp = { module = "com.tencent.kuikly:core-ksp", version.ref = "kuikly" }
+kuikly-core = { module = "com.tencent.kuikly-open:core", version.ref = "kuikly" }
+kuikly-compose = { module = "com.tencent.kuikly-open:compose", version.ref = "kuikly" }
+kuikly-core-annotations = { module = "com.tencent.kuikly-open:core-annotations", version.ref = "kuikly" }
+kuikly-core-ksp = { module = "com.tencent.kuikly-open:core-ksp", version.ref = "kuikly" }
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

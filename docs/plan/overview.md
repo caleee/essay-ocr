@@ -12,19 +12,21 @@
 - 安装 Kuikly 官方 rules（kuiklyComposeDSL）
 - 设计项目目录结构（`docs/design/project-structure.md`）
 - 搭建项目骨架并首次提交
-- 创建 Gradle wrapper（Gradle 8.7）
-- 配置版本组合（Kotlin 2.0.21 + AGP 8.5.0 + KSP）
+- 创建 Gradle wrapper（Gradle 8.7→8.13）
+- 配置版本组合（Kotlin 2.1.21 + AGP 8.13.2 + KSP）
 - 配置 Kuikly 依赖与 Tencent Maven 仓库
-- 添加 KSP 配置（`core-ksp`、`moduleId`/`isMainModule`）
-- 搭建 androidApp 宿主（MainActivity + AndroidManifest）
+- 添加 KSP 配置（`core-ksp`、`pageName`）
+- 搭建 androidApp 宿主（KuiklyRenderActivity + 7 适配器 + 2 Module）
+- 搭建 iOS 壳工程（Xcode project + Podfile + SwiftUI wrapper）
+- 搭建 H5 壳工程（JS target + webpack）
+- 搭建微信小程序壳工程（miniApp + miniapp render）
+- 配置全平台 targets（Android/iOS/H5/微信小程序）
 - 填写需求文档（`docs/meta/project-requirements.md`）
-- 更新 rules 路径作用域（`paths: shared/src/**/*.kt`）
+- 更新规则文件与版本配置
 
 ### 待完成
 | 编号 | 事项 | 说明 |
 |------|------|------|
-| P0-6 | 搭建 iOS 壳工程 | Xcode project + Podfile |
-| P0-7 | 验证 Android 编译通过 | 关键 checkpoint |
 | P0-9 | Kuikly MCP（待确认） | 官方页面上有介绍但无安装方式，需关注后续发布 |
 
 ---
@@ -149,8 +151,9 @@
 
 | Kotlin | AGP | KSP | Gradle |
 |--------|-----|-----|--------|
+| **2.1.21** | **8.13.2** | **2.1.21-2.0.1** | **8.13** ← 本项目当前选用 |
 | 2.1.21 | 8.5.0 | 2.1.21-2.0.1 | 8.7 |
-| **2.0.21** | **8.5.0** | **2.0.21-1.0.27** | **8.7** ← 本项目选用 |
+| 2.0.21 | 8.5.0 | 2.0.21-1.0.27 | 8.7 |
 | 1.9.22 | 7.4.2 | 1.9.22-1.0.17 | 7.5.1 |
 
 ## 里程碑汇总
